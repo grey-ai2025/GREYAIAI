@@ -48,13 +48,14 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
-            {/* Home */}
+            {/* Home 
             <Link
               to="/"
               className="px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-black/5 rounded-lg transition-all"
             >
               Home
             </Link>
+            */}
 
             {/* About 
             <Link
@@ -260,7 +261,7 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-black/10 px-6 py-4 max-h-[90vh] overflow-y-auto">
             <div className="flex flex-col gap-2">
-              {/* Home */}
+              {/* Home 
               <Link
                 to="/"
                 onClick={() => setMobileMenuOpen(false)}
@@ -268,6 +269,7 @@ export default function Header() {
               >
                 Home
               </Link>
+              */}
 
               {/* About */}
               <Link

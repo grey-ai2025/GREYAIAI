@@ -266,9 +266,9 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative z-10 pt-40 pb-24 overflow-hidden">
+    <section className="relative z-10 pt-40 pb-24 bg-gray-50 overflow-hidden">
       {/* Grid Background */}
-      <div className="absolute inset-0 hidden bg-[size:60px_60px] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none"></div>
 
       {/* Tech Animation Background */}
       <canvas
@@ -297,15 +297,15 @@ export default function Hero() {
 
             {/* Title */}
             <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mb-5 text-gray-900">
-              Build Smarter with{' '}
+              Move Like {' '} <br/>
               <span className="bg-gradient-to-r from-[#ADFBF6] to-[#065A5C] bg-clip-text text-transparent">
-                Grey AI
+                You Have a Team
               </span>
             </h1>
 
             {/* Description */}
             <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl mx-auto">
-              Transform your business with intelligent automation. Our AI-powered tools help you work faster, smarter, and more efficiently.
+              Elevated AI solutions that clarify, cater, and multiply your execution
             </p>
 
             {/* Buttons */}

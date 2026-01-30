@@ -158,8 +158,8 @@ const departments = [
 
 function DepartmentSection({ department }) {
   return (
-    <div className="bg-white border border-black/10 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow min-h-[500px]">
-      <div className="p-10 md:p-16">
+    <div className="bg-white border border-black/10 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow min-h-[500px] flex items-center">
+      <div className="p-10 md:p-16 w-full">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Side - Content */}
           <div>
@@ -264,15 +264,3 @@ export default function UseCasesSection() {
     </section>
   );
 }
-
-{/* AYUSIN YUNG SOLUTION/ USE CASE BUKAS!!!
-    AYUSIN YUNG SOLUTION/ USE CASE BUKAS!!!
-    AYUSIN YUNG SOLUTION/ USE CASE BUKAS!!!
-    AYUSIN YUNG SOLUTION/ USE CASE BUKAS!!!
-    AYUSIN YUNG SOLUTION/ USE CASE BUKAS!!!
-    AYUSIN YUNG SOLUTION/ USE CASE BUKAS!!!
-    AYUSIN YUNG SOLUTION/ USE CASE BUKAS!!!
-    AYUSIN YUNG SOLUTION/ USE CASE BUKAS!!!
-    AYUSIN YUNG SOLUTION/ USE CASE BUKAS!!!
-    AYUSIN YUNG SOLUTION/ USE CASE BUKAS!!!
-  */}

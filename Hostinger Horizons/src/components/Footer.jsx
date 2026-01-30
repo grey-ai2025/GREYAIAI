@@ -80,7 +80,6 @@ export default function Footer({ onProductSelect }) {
                 Company
               </h5>
               <nav className="flex flex-col gap-2">
-                <Link to="/about" className="text-gray-600 hover:text-[#065A5C] transition-colors">About</Link>
                 <a href="https://www.linkedin.com/company/greyai" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#065A5C] transition-colors">LinkedIn</a>
               </nav>
             </div>

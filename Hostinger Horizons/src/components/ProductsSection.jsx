@@ -203,9 +203,9 @@ function CustomAITab({ onApply }) {
           <h3 className="text-4xl md:text-5xl font-light tracking-[0.35em] text-[#ADFBF6] mb-1" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
             <span className="text-shadow-glow exhale-e relative">E</span>XHALE
           </h3>
-          <p className="text-lg text-[#ADFBF6] mb-5">The AI Executive for Executive Parents</p>
+          <p className="text-lg text-[#ADFBF6] mb-5">The AI Executive for Executives</p>
           <p className="text-gray-400 leading-relaxed mb-6">
-            Your AI-powered family assistant that manages school calendars, emails, schedules, and communications so you can focus on what matters most.
+            Your AI-powered assistant that manages school calendars, emails, schedules, and communications so you can focus on what matters most.
           </p>
 
           <ul className="space-y-2 mb-8">
