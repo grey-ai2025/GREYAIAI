@@ -20,9 +20,9 @@ export default function Footer({ onProductSelect }) {
   const scrollToTestimonials = (e) => {
     e.preventDefault();
     if (location.pathname !== '/') {
-      window.location.href = '/#testimonials';
+      window.location.href = '/#Newsletter';
     } else {
-      document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('Newsletter')?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -37,7 +37,7 @@ export default function Footer({ onProductSelect }) {
               <img
                 src="https://res.cloudinary.com/dnv13bm7j/image/upload/v1761851714/GREY_LOGO_-_Imgur_r8sglc.png"
                 alt="Grey AI"
-                className="h-12 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
           </div>
@@ -92,7 +92,7 @@ export default function Footer({ onProductSelect }) {
               <nav className="flex flex-col gap-2">
                 <a href="https://b2cspark.greyai.ai" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#065A5C] transition-colors">Spark Assessment</a>
                 <a
-                  href="#testimonials"
+                  href="#Newsletter"
                   onClick={scrollToTestimonials}
                   className="text-gray-600 hover:text-[#065A5C] transition-colors"
                 >

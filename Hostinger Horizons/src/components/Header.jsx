@@ -12,9 +12,9 @@ export default function Header() {
   const scrollToTestimonials = (e) => {
     e.preventDefault();
     if (location.pathname !== '/') {
-      window.location.href = '/#testimonials';
+      window.location.href = '/#Newsletter';
     } else {
-      document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('Newsletter')?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -40,9 +40,9 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <img
-              src="https://res.cloudinary.com/dnv13bm7j/image/upload/v1761851714/GREY_LOGO_-_Imgur_r8sglc.png"
+              src="https://res.cloudinary.com/dnv13bm7j/image/upload/v1770309966/GREY_LOGO_miuq6t.svg"
               alt="Grey AI"
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
 
@@ -73,7 +73,7 @@ export default function Header() {
               >
                 Products
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="transition-transform group-hover:rotate-180">
-                  <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                 </svg>
               </button>
 
@@ -86,8 +86,8 @@ export default function Header() {
                     <div className="flex items-center gap-2.5 mb-1">
                       <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-cyan-500/15 text-cyan-500">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
                         </svg>
                       </span>
                       <span className="font-semibold text-sm text-gray-900">AI Literacy</span>
@@ -95,15 +95,15 @@ export default function Header() {
                     <p className="text-xs text-gray-400 mb-4">AI literacy and assessment tools</p>
                     <div className="flex flex-col gap-1">
                       <a href="#products-literacy" onClick={(e) => scrollToProductTab(e, 'literacy')} className="flex flex-col p-3 rounded-lg hover:bg-black/5 transition-all">
-                        <span className="text-sm font-medium text-gray-900">Spark Score</span>
+                        <span className="text-sm font-medium text-gray-900">SPARK Score™</span>
                         <span className="text-xs text-gray-400">AI literacy assessment</span>
                       </a>
                       <a href="#products-literacy" onClick={(e) => scrollToProductTab(e, 'literacy')} className="flex flex-col p-3 rounded-lg hover:bg-black/5 transition-all">
-                        <span className="text-sm font-medium text-gray-900">Spark Path</span>
+                        <span className="text-sm font-medium text-gray-900">SPARK Path™</span>
                         <span className="text-xs text-gray-400">Personalized learning</span>
                       </a>
                       <a href="#products-literacy" onClick={(e) => scrollToProductTab(e, 'literacy')} className="flex flex-col p-3 rounded-lg hover:bg-black/5 transition-all">
-                        <span className="text-sm font-medium text-gray-900">Spark X</span>
+                        <span className="text-sm font-medium text-gray-900">SPARK X™</span>
                         <span className="text-xs text-gray-400">Analytics dashboard</span>
                       </a>
                     </div>
@@ -114,7 +114,7 @@ export default function Header() {
                     <div className="flex items-center gap-2.5 mb-1">
                       <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#ADFBF6]/15 text-[#065A5C]">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                         </svg>
                       </span>
                       <span className="font-semibold text-sm text-gray-900">Custom AI</span>
@@ -127,12 +127,12 @@ export default function Header() {
                         <span className="text-xs text-gray-400">AI Executive</span>
                       </a>
                       <a href="#products-custom" onClick={(e) => scrollToProductTab(e, 'custom')} className="flex flex-col p-3 rounded-lg hover:bg-black/5 transition-all">
-                        <span className="text-sm font-medium text-gray-900">AI Assistants</span>
-                        <span className="text-xs text-gray-400">Custom-built AI</span>
+                        <span className="text-sm font-medium text-gray-900">Essence</span>
+                        <span className="text-xs text-gray-400">Voice multiplier</span>
                       </a>
                       <a href="#products-custom" onClick={(e) => scrollToProductTab(e, 'custom')} className="flex flex-col p-3 rounded-lg hover:bg-black/5 transition-all">
-                        <span className="text-sm font-medium text-gray-900">ECHO</span>
-                        <span className="text-xs text-gray-400">Digital replicas</span>
+                        <span className="text-sm font-medium text-gray-900">Echo</span>
+                        <span className="text-xs text-gray-400">Thought partner</span>
                       </a>
                     </div>
                   </div>
@@ -142,8 +142,8 @@ export default function Header() {
                     <div className="flex items-center gap-2.5 mb-1">
                       <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#ADFBF6]/15 text-[#065A5C]">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <rect x="3" y="3" width="18" height="18" rx="2"/>
-                          <path d="M9 12h6M12 9v6"/>
+                          <rect x="3" y="3" width="18" height="18" rx="2" />
+                          <path d="M9 12h6M12 9v6" />
                         </svg>
                       </span>
                       <span className="font-semibold text-sm text-gray-900">AI Agents</span>
@@ -161,7 +161,7 @@ export default function Header() {
                       <a href="#products-agents" onClick={(e) => scrollToProductTab(e, 'agents')} className="flex items-center gap-1.5 p-3 rounded-lg text-[#065A5C] text-sm font-medium hover:bg-black/5 transition-all">
                         View All Agents
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M5 10l4-4-4-4"/>
+                          <path d="M5 10l4-4-4-4" />
                         </svg>
                       </a>
                     </div>
@@ -187,7 +187,7 @@ export default function Header() {
               >
                 Resources
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="transition-transform group-hover:rotate-180">
-                  <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                 </svg>
               </button>
 
@@ -198,20 +198,20 @@ export default function Header() {
                     <a href="https://b2cspark.greyai.ai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg hover:bg-black/5 transition-all">
                       <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-cyan-500/15 text-cyan-500">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M9 11l3 3L22 4"/>
-                          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                          <path d="M9 11l3 3L22 4" />
+                          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
                         </svg>
                       </span>
                       <div>
-                        <span className="text-sm font-medium text-gray-900 block">Spark Assessment</span>
+                        <span className="text-sm font-medium text-gray-900 block">SPARK Assessment</span>
                         <span className="text-xs text-gray-400">Test your AI literacy</span>
                       </div>
                     </a>
-                    <a href="#testimonials" onClick={scrollToTestimonials} className="flex items-center gap-3 p-3 rounded-lg hover:bg-black/5 transition-all">
+                    <a href="#Newsletter" onClick={scrollToTestimonials} className="flex items-center gap-3 p-3 rounded-lg hover:bg-black/5 transition-all">
                       <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#ADFBF6]/15 text-[#065A5C]">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                          <polyline points="22,6 12,13 2,6"/>
+                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                          <polyline points="22,6 12,13 2,6" />
                         </svg>
                       </span>
                       <div>
@@ -222,7 +222,7 @@ export default function Header() {
                     <a href="mailto:admin@greyaiadvisors.com" className="flex items-center gap-3 p-3 rounded-lg hover:bg-black/5 transition-all">
                       <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#ADFBF6]/15 text-[#065A5C]">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                         </svg>
                       </span>
                       <div>
@@ -242,7 +242,7 @@ export default function Header() {
               onClick={handleGetStarted}
               className="px-5 py-2.5 text-sm font-medium text-gray-900 bg-[#ADFBF6] rounded-lg hover:shadow-lg hover:shadow-[#ADFBF6]/30 transition-all"
             >
-              Get Started
+              Explore
             </button>
           </div>
 
@@ -294,7 +294,7 @@ export default function Header() {
                     fill="none"
                     className={`transition-transform ${mobileProductsOpen ? 'rotate-180' : ''}`}
                   >
-                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                   </svg>
                 </button>
 
@@ -302,9 +302,9 @@ export default function Header() {
                   <div className="pl-4 mt-2 space-y-4">
                     <div>
                       <p className="px-4 py-1 text-xs font-semibold text-gray-400 uppercase">AI Literacy</p>
-                      <a href="#products-literacy" onClick={(e) => { scrollToProductTab(e, 'literacy'); setMobileMenuOpen(false); }} className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">Spark Score</a>
-                      <a href="#products-literacy" onClick={(e) => { scrollToProductTab(e, 'literacy'); setMobileMenuOpen(false); }} className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">Spark Path</a>
-                      <a href="#products-literacy" onClick={(e) => { scrollToProductTab(e, 'literacy'); setMobileMenuOpen(false); }} className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">Spark X</a>
+                      <a href="#products-literacy" onClick={(e) => { scrollToProductTab(e, 'literacy'); setMobileMenuOpen(false); }} className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">SPARK Score™</a>
+                      <a href="#products-literacy" onClick={(e) => { scrollToProductTab(e, 'literacy'); setMobileMenuOpen(false); }} className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">SPARK Path™</a>
+                      <a href="#products-literacy" onClick={(e) => { scrollToProductTab(e, 'literacy'); setMobileMenuOpen(false); }} className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">SPARK X™</a>
                     </div>
                     <div>
                       <p className="px-4 py-1 text-xs font-semibold text-gray-400 uppercase">Custom AI</p>
@@ -345,14 +345,14 @@ export default function Header() {
                     fill="none"
                     className={`transition-transform ${mobileResourcesOpen ? 'rotate-180' : ''}`}
                   >
-                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                   </svg>
                 </button>
 
                 {mobileResourcesOpen && (
                   <div className="pl-4 mt-2">
-                    <a href="https://b2cspark.greyai.ai" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">Spark Assessment</a>
-                    <a href="#testimonials" onClick={(e) => { scrollToTestimonials(e); setMobileMenuOpen(false); }} className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">Subscribe</a>
+                    <a href="https://b2cspark.greyai.ai" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">SPARK Assessment</a>
+                    <a href="#Newsletter" onClick={(e) => { scrollToTestimonials(e); setMobileMenuOpen(false); }} className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">Subscribe</a>
                     <a href="mailto:admin@greyaiadvisors.com" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900">Contact Us</a>
                   </div>
                 )}
@@ -363,7 +363,7 @@ export default function Header() {
                 onClick={handleGetStarted}
                 className="mt-2 px-4 py-2.5 text-sm font-medium text-gray-900 bg-[#ADFBF6] rounded-lg hover:shadow-lg hover:shadow-[#ADFBF6]/30 transition-all"
               >
-                Get Started
+                Explore
               </button>
             </div>
           </div>

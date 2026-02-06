@@ -37,7 +37,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonials" className="relative z-10 py-24">
+    <section id="Newsletter" className="relative z-10 py-24">
 
       {/* Cyan Blobs at Top */}
       <div className="absolute top-0 left-0 right-0 h-72 bg-[radial-gradient(ellipse_60%_40%_at_30%_0%,rgba(173,251,246,0.12),transparent_60%),radial-gradient(ellipse_50%_35%_at_70%_0%,rgba(173,251,246,0.08),transparent_60%)] pointer-events-none"></div>
