@@ -19,8 +19,8 @@ function HomePage({ productsRef }) {
       <LogosSection />
       <HowItWorksSection />
       <ProductsSection ref={productsRef} />
-      <UseCasesSection />
-      <FAQSection />
+      {/* <UseCasesSection /> */}
+      {/* <FAQSection /> */}
       <TestimonialsSection />
     </>
   );
