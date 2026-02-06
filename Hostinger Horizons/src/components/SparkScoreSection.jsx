@@ -1,4 +1,6 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { createPortal } from 'react-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -21,6 +23,8 @@ const staggerContainer = {
 };
 
 export default function SparkScoreSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const features = [
     {
       icon: (
@@ -112,17 +116,15 @@ export default function SparkScoreSection() {
 
             {/* CTA Button */}
             <motion.div variants={fadeInUp}>
-              <a
-                href="https://b2cspark.greyai.ai"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => setIsModalOpen(true)}
                 className="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-[#065A5C] to-[#0a7a7a] rounded-xl shadow-lg shadow-[#065A5C]/25 hover:shadow-xl hover:shadow-[#065A5C]/30 hover:scale-[1.02] transition-all"
               >
                 Take the Free Assessment
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
+              </button>
               <p className="mt-3 text-sm text-gray-500">No credit card required. Takes ~10 minutes.</p>
             </motion.div>
           </div>
@@ -181,6 +183,49 @@ export default function SparkScoreSection() {
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Typeform Modal - Rendered via Portal to escape parent constraints */}
+      {createPortal(
+        <AnimatePresence>
+          {isModalOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+              onClick={() => setIsModalOpen(false)}
+            >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                className="relative w-full max-w-4xl h-[85vh] bg-white rounded-2xl shadow-2xl overflow-hidden"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Close Button */}
+                <button
+                  onClick={() => setIsModalOpen(false)}
+                  className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
+                >
+                  <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+
+                {/* Typeform Embed */}
+                <iframe
+                  src="https://greyai.typeform.com/to/EXnquQbh"
+                  title="SPARK Score Assessment"
+                  className="w-full h-full border-0"
+                  allow="camera; microphone; autoplay; encrypted-media;"
+                />
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </section>
   );
 }

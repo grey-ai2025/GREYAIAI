@@ -222,17 +222,162 @@ function AILiteracyTab({
         <p className="text-gray-400 text-sm md:text-base">Precision starts with clarity. The Spark Suite™ delivers a rigorous assessment, bespoke learning paths, and organizational analytics—building AI fluency that compounds with every investment.</p>
       </div>
 
-      {/* Product Cards Grid */}
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"
-      >
-        <ProductCard badge="Learning" title="SPARK Path™" description="Twenty-four precision micro-trainings across eight competency areas—from AI foundations to advanced workflow integration. Your SPARK Score™ shapes the curriculum, but you control the sequence." features={['Decision frameworks, challenges, and checklists in every module', 'Follow scored recommendations, select by focus area, or self-direct', 'Skills designed for immediate, practical application']} buttonText="Start Learning" buttonLink="https://yoursparkpath.com" external={true} />
-        <ProductCard badge="Analytics" title="SPARK X™" description="Strategic visibility into team and organizational AI capability. SPARK X™ equips leaders to design targeted fluency programs, surface builders and change catalysts, and integrate AI readiness into talent reviews." features={['Targeted fluency programs across teams and roles', 'Identify builders and change catalysts in your ranks', 'Seamless integration with talent reviews and change strategy']} buttonText="Request Demo" onApply={() => onApply('Spark X™')} />
-      </motion.div>
+      {/* Featured Cards - 2 Column Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+        {/* SPARK Path Featured Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative flex flex-col p-5 md:p-7 bg-gradient-to-br from-white/[0.06] to-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-[#ADFBF6]/30 transition-colors"
+        >
+          {/* Glow */}
+          <div className="absolute -top-1/2 -right-1/4 w-60 h-60 bg-[radial-gradient(circle,rgba(173,251,246,0.15),transparent_60%)] blur-[60px] pointer-events-none"></div>
+
+          {/* Visual at top */}
+          <div className="flex items-center justify-center mb-6">
+            <div className="relative w-full max-w-[180px] aspect-square">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#ADFBF6]/20 to-transparent rounded-full blur-2xl"></div>
+              <svg className="w-full h-full" viewBox="0 0 200 200" fill="none">
+                <circle cx="100" cy="100" r="70" stroke="rgba(173,251,246,0.1)" strokeWidth="16" />
+                <circle cx="100" cy="100" r="70" stroke="url(#pathGradient)" strokeWidth="16" strokeDasharray="330 110" strokeLinecap="round" className="animate-[spin_20s_linear_infinite]" style={{ transformOrigin: 'center' }} />
+                <circle cx="100" cy="100" r="30" fill="rgba(173,251,246,0.1)" />
+                <path d="M88 100l8 8 16-16" stroke="#ADFBF6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => {
+                  const rad = (angle * Math.PI) / 180;
+                  const x = 100 + 70 * Math.cos(rad);
+                  const y = 100 + 70 * Math.sin(rad);
+                  return <circle key={i} cx={x} cy={y} r="6" fill={i < 3 ? "#ADFBF6" : "rgba(173,251,246,0.3)"} />;
+                })}
+                <defs>
+                  <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#ADFBF6" />
+                    <stop offset="100%" stopColor="#065A5C" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 text-[10px] text-[#ADFBF6]/60 font-medium">8 Competencies</div>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[10px] text-[#ADFBF6]/60 font-medium">24 Modules</div>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 flex-grow">
+            <span className="inline-flex items-center gap-2 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-[#ADFBF6] bg-[#ADFBF6]/10 rounded-lg mb-3">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              Learning
+            </span>
+
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-1">SPARK Path™</h3>
+            <p className="text-[#ADFBF6] text-sm mb-3">Your personalized AI learning journey</p>
+            <p className="text-gray-400 text-xs leading-relaxed mb-4">
+              Twenty-four micro-trainings across eight competency areas. Your SPARK Score™ shapes the curriculum.
+            </p>
+
+            <ul className="space-y-1.5 mb-5">
+              {['Decision frameworks & checklists', 'Self-directed learning paths', 'Real-world application'].map((item, i) => <li key={i} className="flex items-center gap-2 text-gray-300 text-xs">
+                  <span className="w-1 h-1 bg-[#ADFBF6] rounded-full"></span>
+                  {item}
+                </li>)}
+            </ul>
+          </div>
+
+          <a href="https://yoursparkpath.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-white/10 border border-white/20 rounded-lg hover:bg-white/15 hover:border-[#ADFBF6] transition-all self-start">
+            Start Learning
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </motion.div>
+
+        {/* SPARK X Featured Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="relative flex flex-col p-5 md:p-7 bg-gradient-to-br from-white/[0.06] to-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-[#ADFBF6]/30 transition-colors"
+        >
+          {/* Glow */}
+          <div className="absolute -bottom-1/2 -left-1/4 w-60 h-60 bg-[radial-gradient(circle,rgba(173,251,246,0.15),transparent_60%)] blur-[60px] pointer-events-none"></div>
+
+          {/* Visual at top */}
+          <div className="flex items-center justify-center mb-6">
+            <div className="relative w-full max-w-[220px] aspect-[4/3] bg-white/[0.03] border border-white/10 rounded-lg p-3 overflow-hidden">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-5 h-5 rounded bg-[#ADFBF6]/20 flex items-center justify-center">
+                      <svg className="w-2.5 h-2.5 text-[#ADFBF6]" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
+                      </svg>
+                    </div>
+                    <span className="text-[10px] text-white/60">Team Overview</span>
+                  </div>
+                  <div className="text-[10px] text-[#ADFBF6]">Live</div>
+                </div>
+                <div className="flex items-end gap-1.5 h-14">
+                  {[65, 45, 80, 55, 70, 40, 85, 60].map((height, i) => (
+                    <div key={i} className="flex-1">
+                      <div
+                        className="w-full rounded-t"
+                        style={{
+                          height: `${height}%`,
+                          background: i === 6 ? 'linear-gradient(to top, #065A5C, #ADFBF6)' : 'rgba(173,251,246,0.2)'
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <div className="grid grid-cols-3 gap-1 pt-1.5 border-t border-white/5">
+                  <div className="text-center">
+                    <div className="text-sm font-bold text-[#ADFBF6]">847</div>
+                    <div className="text-[8px] text-white/40">Assessed</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-sm font-bold text-white">72%</div>
+                    <div className="text-[8px] text-white/40">Avg Score</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-sm font-bold text-[#ADFBF6]">23</div>
+                    <div className="text-[8px] text-white/40">Champions</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 flex-grow">
+            <span className="inline-flex items-center gap-2 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-[#ADFBF6] bg-[#ADFBF6]/10 rounded-lg mb-3">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+              Analytics
+            </span>
+
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-1">SPARK X™</h3>
+            <p className="text-[#ADFBF6] text-sm mb-3">Organizational AI capability intelligence</p>
+            <p className="text-gray-400 text-xs leading-relaxed mb-4">
+              Strategic visibility into team AI capability. Design targeted fluency programs and integrate into talent reviews.
+            </p>
+
+            <ul className="space-y-1.5 mb-5">
+              {['Team-wide capability mapping', 'Identify AI champions', 'Talent review integration'].map((item, i) => <li key={i} className="flex items-center gap-2 text-gray-300 text-xs">
+                  <span className="w-1 h-1 bg-[#ADFBF6] rounded-full"></span>
+                  {item}
+                </li>)}
+            </ul>
+          </div>
+
+          <button onClick={() => onApply('Spark X™')} className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-white/10 border border-white/20 rounded-lg hover:bg-white/15 hover:border-[#ADFBF6] transition-all self-start">
+            Request Demo
+          </button>
+        </motion.div>
+      </div>
     </div>;
 }
 function CustomAITab({
