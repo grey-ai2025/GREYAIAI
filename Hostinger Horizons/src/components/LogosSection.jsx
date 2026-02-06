@@ -50,7 +50,7 @@ export default function Logos() {
       <div className="max-w-[80%] mx-auto">
         {/* Label */}
         <p className="text-center text-sm font-medium text-gray-500 uppercase tracking-widest mb-6">
-          Trusted by industry leaders from:
+          Trusted by leaders from:
         </p>
 
         {/* Logo Carousel */}
