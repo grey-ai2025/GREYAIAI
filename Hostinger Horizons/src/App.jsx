@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import LogosSection from './components/LogosSection';
 import HowItWorksSection from './components/HowItWorksSection';
+import SparkScoreSection from './components/SparkScoreSection';
 import ProductsSection from './components/ProductsSection';
 import UseCasesSection from './components/UseCasesSection';
 import FAQSection from './components/FAQSection';
@@ -18,6 +19,7 @@ function HomePage({ productsRef }) {
       <Hero />
       <LogosSection />
       {/* <HowItWorksSection /> */}
+      <SparkScoreSection />
       <ProductsSection ref={productsRef} />
       {/* <UseCasesSection /> */}
       {/* <FAQSection /> */}

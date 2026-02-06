@@ -228,9 +228,8 @@ function AILiteracyTab({
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"
       >
-        <ProductCard badge="Assessment" title="SPARK Score™" description="A rigorous diagnostic built on research from McKinsey, Harvard, the NIST AI Risk Management Framework, and more. The SPARK Score™ reveals where capability exists and where it's missing across eight competency areas." features={['Detailed PDF report with personalized curriculum recommendations', 'Identifies strengths, gaps, and priority development areas', 'Direct mapping to your SPARK Path™ trainings']} buttonText="Take Assessment" buttonLink="https://b2cspark.greyai.ai" external={true} />
         <ProductCard badge="Learning" title="SPARK Path™" description="Twenty-four precision micro-trainings across eight competency areas—from AI foundations to advanced workflow integration. Your SPARK Score™ shapes the curriculum, but you control the sequence." features={['Decision frameworks, challenges, and checklists in every module', 'Follow scored recommendations, select by focus area, or self-direct', 'Skills designed for immediate, practical application']} buttonText="Start Learning" buttonLink="https://yoursparkpath.com" external={true} />
         <ProductCard badge="Analytics" title="SPARK X™" description="Strategic visibility into team and organizational AI capability. SPARK X™ equips leaders to design targeted fluency programs, surface builders and change catalysts, and integrate AI readiness into talent reviews." features={['Targeted fluency programs across teams and roles', 'Identify builders and change catalysts in your ranks', 'Seamless integration with talent reviews and change strategy']} buttonText="Request Demo" onApply={() => onApply('Spark X™')} />
       </motion.div>
