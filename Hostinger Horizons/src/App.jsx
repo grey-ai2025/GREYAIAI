@@ -17,7 +17,7 @@ function HomePage({ productsRef }) {
     <>
       <Hero />
       <LogosSection />
-      <HowItWorksSection />
+      {/* <HowItWorksSection /> */}
       <ProductsSection ref={productsRef} />
       {/* <UseCasesSection /> */}
       {/* <FAQSection /> */}
