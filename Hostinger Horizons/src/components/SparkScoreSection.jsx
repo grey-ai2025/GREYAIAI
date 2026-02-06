@@ -85,7 +85,7 @@ export default function SparkScoreSection() {
               className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight"
             >
               Discover Your{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#065A5C] to-[#0d8a8a]">
+              <span className="bg-gradient-to-r from-[#ADFBF6] to-[#065A5C] bg-clip-text text-transparent">
                 AI Readiness
               </span>
             </motion.h2>
@@ -94,9 +94,7 @@ export default function SparkScoreSection() {
               variants={fadeInUp}
               className="text-lg text-gray-600 mb-8 leading-relaxed"
             >
-              The SPARK Score is a rigorous diagnostic built on research from McKinsey, Harvard,
-              and the NIST AI Risk Management Framework. In just 10 minutes, reveal where capability
-              exists and where it's missing across eight competency areas.
+              A rigorous diagnostic built on research from McKinsey, Harvard, the NIST AI Risk Management Framework, and more. The SPARK Score™ reveals where capability exists and where it's missing across eight competency areas.
             </motion.p>
 
             {/* Features */}
@@ -118,7 +116,7 @@ export default function SparkScoreSection() {
             <motion.div variants={fadeInUp}>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-[#065A5C] to-[#0a7a7a] rounded-xl shadow-lg shadow-[#065A5C]/25 hover:shadow-xl hover:shadow-[#065A5C]/30 hover:scale-[1.02] transition-all"
+                className="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-gray-900 bg-[#ADFBF6] rounded-xl shadow-lg shadow-[#ADFBF6]/40 hover:shadow-xl hover:shadow-[#ADFBF6]/50 hover:scale-[1.02] transition-all"
               >
                 Take the Free Assessment
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -143,7 +141,7 @@ export default function SparkScoreSection() {
                 {/* Header */}
                 <div className="flex items-center justify-between mb-6 pb-6 border-b border-gray-100">
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">SPARK Score</h3>
+                    <h3 className="text-xl font-bold text-gray-900">SPARK Score™</h3>
                     <p className="text-sm text-gray-500">AI Readiness Assessment</p>
                   </div>
                   <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-[#ADFBF6] to-[#065A5C] rounded-xl">
@@ -165,7 +163,7 @@ export default function SparkScoreSection() {
 
                 {/* Competency Preview */}
                 <div className="space-y-3">
-                  {['AI Foundations', 'Prompt Engineering', 'Workflow Integration', 'Data Literacy'].map((item, i) => (
+                  {['AI Foundations', 'Practical AI Tool', 'AI Ethics', 'Problem-Solving'].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <div className="flex-grow h-2 bg-gray-100 rounded-full overflow-hidden">
                         <div
@@ -216,7 +214,7 @@ export default function SparkScoreSection() {
                 {/* Typeform Embed */}
                 <iframe
                   src="https://greyai.typeform.com/to/EXnquQbh"
-                  title="SPARK Score Assessment"
+                  title="SPARK Score™ Assessment"
                   className="w-full h-full border-0"
                   allow="camera; microphone; autoplay; encrypted-media;"
                 />

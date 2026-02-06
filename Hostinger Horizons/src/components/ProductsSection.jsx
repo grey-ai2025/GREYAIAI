@@ -112,7 +112,7 @@ const Products = forwardRef((props, ref) => {
           <motion.span variants={fadeInUp} className="inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white bg-[#ADFBF6]/10 rounded-md mb-4">
             Products
           </motion.span>
-          <motion.h2 variants={fadeInUp} className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">Explore our Products Suite</motion.h2>
+          <motion.h2 variants={fadeInUp} className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">Explore our Product Suite</motion.h2>
           <motion.p variants={fadeInUp} className="text-gray-400 text-sm md:text-base">Three product suites designed for different needs and maturity levels</motion.p>
         </motion.div>
 
@@ -366,7 +366,7 @@ function AILiteracyTab({
             </p>
 
             <ul className="space-y-1.5 mb-5">
-              {['Team-wide capability mapping', 'Identify AI champions', 'Talent review integration'].map((item, i) => <li key={i} className="flex items-center gap-2 text-gray-300 text-xs">
+              {['Team-wide capability mapping', 'Human-Centered Transformation', 'Talent review integration'].map((item, i) => <li key={i} className="flex items-center gap-2 text-gray-300 text-xs">
                   <span className="w-1 h-1 bg-[#ADFBF6] rounded-full"></span>
                   {item}
                 </li>)}
