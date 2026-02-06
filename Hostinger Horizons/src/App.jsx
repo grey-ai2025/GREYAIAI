@@ -12,10 +12,12 @@ import TestimonialsSection from './components/TestimonialsSection';
 import Footer from './components/Footer';
 import About from './components/About';
 import Solutions from './components/Solutions';
+import { HomePageSEO } from './components/SEO';
 
 function HomePage({ productsRef }) {
   return (
     <>
+      <HomePageSEO />
       <Hero />
       <LogosSection />
       {/* <HowItWorksSection /> */}

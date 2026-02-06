@@ -1,13 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { AboutPageSEO } from './SEO';
 
 export default function About() {
   return (
     <>
-      <Helmet>
-        <title>About Us - Grey AI | Empowering Businesses with AI Solutions</title>
-        <meta name="description" content="Learn about Grey AI's mission to democratize AI adoption for businesses. Discover our values, team, and commitment to making AI accessible and practical." />
-      </Helmet>
+      <AboutPageSEO />
 
       <div className="min-h-screen">
         {/* Hero Section */}

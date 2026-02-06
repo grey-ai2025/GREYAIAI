@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import { useSearchParams } from 'react-router-dom';
 import ApplyModal from './ApplyModal';
+import { SolutionsPageSEO } from './SEO';
 
 const solutions = [
   {
@@ -152,10 +152,7 @@ export default function Solutions() {
 
   return (
     <>
-      <Helmet>
-        <title>Solutions - Grey AI | AI Solutions for Every Role</title>
-        <meta name="description" content="Discover how Grey AI's products apply to different roles in your organization. From executives to HR, operations to finance - find the right AI solution for your team." />
-      </Helmet>
+      <SolutionsPageSEO />
 
       <div className="min-h-screen">
         {/* Hero Section */}
